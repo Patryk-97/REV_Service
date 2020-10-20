@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+import { Query } from '@nestjs/common/decorators/http/route-params.decorator';
 import { AppService } from './app.service';
 
 @Controller()
@@ -6,7 +7,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getReversedString(): string {
+    return this.appService.getHello('testowyString');
   }
 }
