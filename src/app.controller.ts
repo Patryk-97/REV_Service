@@ -8,6 +8,6 @@ export class AppController {
 
   @Get()
   getReversedString(): string {
-    return this.appService.getHello('testowyString');
+    return this.appService.getReversedString('testowyString');
   }
 }
